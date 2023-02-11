@@ -46,6 +46,7 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 .justify-content{
     justify-content: center;
@@ -55,16 +56,64 @@ footer{
     background-color: red;
     margin-bottom: 1rem;
 }
-.work{
+.about-me{
     display: flex;
-    flex-wrap: wrap;
-}
-.work-header{
-    min-width: 10%;
+    flex-direction: column;
     
 }
+.about-me-header{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.work-header{    
+    text-align: center;  
+    margin: 0.5rem 0;  
+}
+
+.work{
+    display: flex;
+    flex-direction: column;    
+}
+
+.work-content{
+    display: flex;
+    flex-direction: column;
+    margin:1rem;
+}
+
+.major-project{
+    margin:1rem 0;
+}
+.mini-project{
+    margin:1rem 0;
+    display: flex;
+    flex-wrap: wrap;    
+}
+.mini-project-card{
+    width: 100%;
+}
 
 
-.major-project-card{
+@media screen and (min-width:540px) {
+    .work{
+        flex-direction: row;
+    }
+    .work-content{
+        width: 100%;
+    }    
+    .mini-project-card{
+        max-width: 50%;
+    }
 
+}
+
+
+@media screen and (min-width:768px) {
+    .mini-project-card{
+        max-width: 25%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
 }

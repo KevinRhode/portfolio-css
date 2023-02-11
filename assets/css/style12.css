@@ -1,0 +1,171 @@
+:root{
+    --main-header-bg:#fff;
+    --main-footer-bg:#fff;
+}
+html{
+    font-size: 62.5%;
+    
+}
+body{
+    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+/* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+font-size: 1.75rem;
+line-height: 1.5;
+min-width: 270px;
+/* display: flex; */
+/* flex-direction: column; */
+/* align-items: center; */
+/* color: var(--gin); */
+/* background-color: var(--outer-space); */
+}
+header,
+footer{
+    justify-content: space-around;
+}
+header{
+    width: 96%;
+    margin: 1rem auto;
+    background-color:#00ffff;
+    padding-bottom: 1rem;
+}
+header h2{
+    font-size: 3rem;
+}
+
+main{
+    width: 96%;
+    margin: 0.5rem auto;
+    padding: 1.5rem 0;
+    background-color: #09d305;
+    /* display: flex; */
+}
+footer{
+    width: 96%;
+    margin: 1rem auto;
+    padding: 1rem 0 1rem 0;
+    background-color: #00ffff;
+}
+.row { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.column { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.justify-content{
+    justify-content: center;
+}
+.banner{
+    min-height: 6rem;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+.about-me{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.about-me p{
+    margin-left: 1rem;
+}
+.about-me-header{
+    min-width: 10rem;
+    /* justify-content: flex-start; */
+}
+.about-me-content{
+    width: 90%;
+}
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.work-header{
+    min-width: 10rem; 
+    background-color:#00ffff ;
+   
+    /* margin: auto; */
+    /* align-items: flex-start; */
+    
+}
+.work-content{
+    display: flex;
+    flex-wrap: wrap;    
+    /* align-items: stretch; */
+    width: 90%;
+}
+
+.major-project{
+    width: 90%;
+    min-height:50%;
+}
+.major-project-card{
+    background-color: #00ffff;
+    /* width: 100%; */
+    min-width: 100%;
+    border-radius: 15px;
+    margin: 1rem;
+}
+.mini-project{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.mini-project-card{
+    background-color: #00ffff;
+    min-width: 100%;
+    border-radius: 15px;
+    margin: 1rem;
+}
+
+@media screen and (min-width: 435px) {
+    .column{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;      
+    }
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 570px) {
+    
+    .about-me{
+        flex-wrap: nowrap;
+    }
+    .about-me-header{
+        max-width: 15%;
+    }
+    .about-me-content{
+        max-width: 85%;
+    }
+    .work{
+        flex-wrap: nowrap;
+    }
+    .work-header{
+        max-width: 15%;
+    }
+    .work-content{
+        max-width: 85%;
+    }    
+    .mini-project-card{
+     width: 50%;
+
+    }
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 96%;
+    }  
+    
+  }
+  
