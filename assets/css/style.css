@@ -25,19 +25,34 @@ footer{
     justify-content: space-around;
 }
 header{
-    width: 96%;
+    width: 95%;
     margin: 1rem auto;
     background-color:#00ffff;
     padding-bottom: 1rem;
 }
+.header-content{
+    min-width: 50%;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+nav ul li {
+    min-width: 50%;
+    text-align: center;
+    background-color: #09d305;
+    border: #fff solid 2px;
+    
+}
 main{
-    width: 96%;
+    width: 95%;
     margin: 0.5rem auto;
     padding: 1.5rem 0;
     background-color: #09d305;
 }
 footer{
-    width: 96%;
+    width: 95%;
     margin: 1rem auto;
     padding: 1rem 0 1rem 0;
     background-color: #00ffff;
@@ -65,6 +80,11 @@ footer{
     text-align: center;
     margin: 0.5rem 0;
 }
+.about-me-content{
+    padding: 0 1rem; 
+    background-color: #00ffff;
+    margin: 0 1rem;
+}
 .work-header{    
     text-align: center;  
     margin: 0.5rem 0;  
@@ -82,28 +102,64 @@ footer{
 }
 
 .major-project{
-    margin:1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin:1rem 0; */
 }
+.major-project-card{
+    width: 100%;
+    background-color: #00ffff;
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
+
+
 .mini-project{
-    margin:1rem 0;
+    
     display: flex;
     flex-wrap: wrap;    
 }
 .mini-project-card{
     width: 100%;
+    background-color: #00ffff;
+    margin: 0.5rem 0;
+}
+
+.footer-content{
+    min-width: 50%;
+}
+.footer-content li{
+    background-color: #09d305;
+    margin: 1rem 0;
+    text-align: center;
+    border: #fff solid 2px
 }
 
 
-@media screen and (min-width:540px) {
+@media screen and (min-width:590px) {
+    .about-me{
+        flex-direction: row;
+    }
+    .about-me-header{
+        width: 10%;
+    }
+    .about-me-content{
+        width: 100%;
+    }
     .work{
         flex-direction: row;
+    }
+    .work-header{
+        width: 10%;
     }
     .work-content{
         width: 100%;
     }    
     .mini-project-card{
+        
         max-width: 50%;
     }
+  
 
 }
 
@@ -111,6 +167,14 @@ footer{
 @media screen and (min-width:768px) {
     .mini-project-card{
         max-width: 25%;
+    }
+    .major-project-card{
+        max-width: 100%;
+    }
+   
+    nav ul li {
+        min-width: 25%;
+        text-align: center;
     }
 }
 
