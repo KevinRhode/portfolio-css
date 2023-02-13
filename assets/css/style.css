@@ -6,7 +6,7 @@
     --main-ivory:#fffae5;
     --main-accent-color:#3d31ad;
     --main-text-color: #f47028;
-    --main-highlight-color:rgb(13, 200, 215);
+    --main-highlight-color:#0dc8d7;
 /* #f47028 */
 
     
@@ -171,20 +171,34 @@ footer{
 .major-project-card .major-1{
     /* background-color: #ff233f; */
     /* transform: translate(0% 100%); */
-    border: var(--main-black) solid 1px;
+    /* background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png); */
+    border: var(--main-accent-color) solid 0.5rem;
     
-    padding: 5% 0;
+    /* padding: 5% 0; */
     height: 100%;
     width: 100%;
 }
-
+.major-1 .bg-image-major-1{
+    background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png);
+    opacity: 0.5;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+div[class^="bg-image-major"]:hover { 
+    box-shadow: 2px 2px 25px 10px rgba(0,0,0, 0.5);
+    opacity: 0.8;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
 
 .card-header-major{
     background-color: var(--main-accent-color);   
     display: inline-block; 
     color: var(--main-text-color);
     transform: translate(-4%, -130%);
-    border: var(--main-highlight-color) solid 3px;
+    border: var(--main-accent-color) solid 3px;
     border-radius: 5px;
     padding: 3px;
 }
@@ -193,7 +207,7 @@ footer{
     display: inline-block; 
     color: var(--main-text-color);
     transform: translate(-3%, -115%);
-    border: var(--main-highlight-color) solid 3px;
+    border: var(--main-accent-color) solid 3px;
     border-radius: 5px;
     padding: 3px;
 }
@@ -214,18 +228,38 @@ footer{
     /* outline: #000 solid 2px; */
     outline-offset: -8px;
     position: relative;
+    min-height: 12rem;
     /* border:#000 solid 0.5rem; */
 }
 
 .mini-project-card .mini-1{
     /* background-color: #ff233f; */
     /* transform: translate(0% 100%); */
-    border: var(--main-black) solid 1px;
-    padding: 5% 0;
+    /* background-image: url(../images/defaultbackdrop.jpg); */
+    
+    border: var(--main-accent-color) solid 0.5rem;
+    /* padding: 5% 0; */
     height: 100%;
     width: 100%;
+    transition: .3s;
 
 }
+.mini-1 .bg-image-mini{
+    background-image: url(../images/defaultbackdrop.jpg);
+    opacity: 0.5;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+div[class^="bg-image-mini"]:hover { 
+    box-shadow: 2px 2px 25px 10px rgba(0,0,0, 0.5);
+    opacity: 0.8;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
 .footer-header{
     padding: 0 1rem;
     color: var(--main-text-color);
