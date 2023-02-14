@@ -1,17 +1,33 @@
 :root{
+
+    /* color selection */
     --main-header-bg:#a304d3;
     --main-footer-bg:#56382D;
     --main-bg:#fffae5;
+
     --main-black: #1b1821;
     --main-ivory:#fffae5;
+    
     --main-accent-color:#3d31ad;
     --main-text-color: #f47028;
     --main-highlight-color:#0dc8d7;
 
+    /* styleing for page */
+    --main-border-type:solid;
+
+    /* show content standard and fullwidth */
+    --main-content-width:95%;
+    --main-content-fullwidth:100%;
+
+    /* top and bottom of body settings */
     --main-display-border-radius: 1rem;
     --main-display-border-thickness: 2px;
 
+    /* color of shadow behind projects */
     --main-display-shadow:rgba(0,0,0, 0.5);
+
+    /* website small content soze */
+    --main-display-smallitem:16rem;
 
     /* #f47028 */
     /* #56382D */
@@ -20,6 +36,7 @@
     /* #1b1821 */
 
 }
+/* set size of 1rem */
 html{
     font-size: 62.5%;
     
@@ -33,6 +50,7 @@ body{
 font-size: 1.75rem;
 line-height: 1.5;
 }
+/* keep content in center */
 header,
 footer{
     justify-content: space-around;
@@ -42,91 +60,91 @@ footer{
     color: var(--main-text-color);
     font-size: 200%;
 }
+/* rounded top border only with no border on bottom, sizing */
 header{
-    width: 95%;
+    width: var(--main-content-width);
     margin: 0 auto;
     background-color:var(--main-accent-color);
     padding-bottom: 1rem;
     border-top-left-radius: var(--main-display-border-radius);
     border-top-right-radius: var(--main-display-border-radius);
-    min-height: 12rem;
-    border-top: var(--main-accent-color) solid var(--main-display-border-thickness);
-    border-left: var(--main-accent-color) solid var(--main-display-border-thickness);
-    border-right: var(--main-accent-color) solid var(--main-display-border-thickness);
+    min-height: var(--main-display-smallitem);
+    border-top: var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
+    border-left: var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
+    border-right: var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
     
 }
+/* added size of menu buttons */
 .header-content{
     min-width: 50%;
     
 }
+/* create flexbox container */
 nav ul{
     display: flex;
     flex-wrap: wrap;
     margin-top: 1rem;
     justify-content: center;
 }
+/* set flexbox item properties */
 nav ul li {
     
     min-width: 80%;
     background-color: var(--main-ivory);
     padding: 0 1rem;
     text-align: center;
-    border: var(--main-black) solid 2px;
+    border: var(--main-black) var(--main-border-type) 2px;
     border-radius: 2rem;
     flex-grow: 1;
     
 }
+/* style around all sections about me, work, banner */
 main{
-    width: 95%;
+    width: var(--main-content-width);
     margin: 0 auto;
-    /* padding: 1.5rem 0; */
     background-color: var(--main-bg);
-    border-left:var(--main-accent-color) solid var(--main-display-border-thickness);
-    border-right:var(--main-accent-color) solid var(--main-display-border-thickness);
+    border-left:var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
+    border-right:var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
 }
+/* style for footer with rounding on only bottom */
 footer{
-    width: 95%;
+    width: var(--main-content-width);
     margin: 0 auto;
     padding: 1rem 0 1rem 0;
     background-color: var(--main-accent-color);
     border-bottom-left-radius: var(--main-display-border-radius);
     border-bottom-right-radius: var(--main-display-border-radius);
-    border-left: var(--main-accent-color) solid var(--main-display-border-thickness);
-    border-right: var(--main-accent-color) solid var(--main-display-border-thickness);
+    border-left: var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
+    border-right: var(--main-accent-color) var(--main-border-type) var(--main-display-border-thickness);
 }
+/* quick flex box row */
 .row { 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 }
+/* center content */
 .justify-content{
     justify-content: center;
 }
+/* show background and set height of image behind avatar */
 .banner{
-    /*  */
-    min-height: 12rem;
+    min-height: var(--main-display-smallitem);
     background-image: url(../images/44179666.jpg);
-    /* background-color: red; */
     background-position: 0 35%;
     background-size: 100%;
     margin-bottom: 1rem;
-    /* justify-content: center; */
 }
+/* style for container of avatar image */
 .avatar-container{
-    /* background-color: #56382D; */
-    /* min-width: 10%;
-    min-height: 10%;
-    z-index: 1; */
-    height: 12rem;
+    height: var(--main-display-smallitem);
     width: 100%;
-    
     display: flex;
     justify-content: center;  
     align-items: center; 
-    
-
 }
+/* avatar content with image at backgrund. center in mobile */
 .avatar{
     /* background-color: #0dc8d7; */
     height: 11.5rem;
@@ -135,26 +153,29 @@ footer{
     background-size: 200%;
     background-position: 51% 40%;
     background-image: url(../images/IMG_0930.jpg);
-    border: var(--main-accent-color) solid 0.5rem;
+    border: var(--main-accent-color) var(--main-border-type) 0.5rem;
     
      
     /* transform:translate(0% 50%) */
     
 }
+/* flexbox column */
 .about-me{
     display: flex;
     flex-direction: column;
-    
 }
+/* content alignment */
 .about-me-header{
     text-align: center;
     margin: 0.5rem 0;
 }
+/* styling of page */
 .about-me-content{
     padding: 0 1rem; 
     background-color: var(--main-bg);
     margin: 0 1rem;
 }
+/* content alignment */
 .work-header{    
     text-align: center;  
     margin: 0.5rem 0;  
@@ -174,82 +195,63 @@ footer{
     flex-grow: 1;  
 }
 .major-project-card{
-    /* width: 100%; */
-    flex-basis: 100%;
-    /* used for testing spacing */
-    /* background-color: #00ffff; */
+   
+    flex-basis: var(--main-content-fullwidth);
     padding: 15px;
     margin: 0.5rem 0;
-    /* used for testing spaceing */
-    /* outline: #000 solid 2px; */
-    /* outline-offset: -8px; */
     min-height: 25rem;
 }
 .major-project-card .major-1{
-    /* background-color: #ff233f; */
-    /* transform: translate(0% 100%); */
-    /* background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png); */
-    border: var(--main-accent-color) solid 0.5rem;
-    
-    /* padding: 5% 0; */
-    height: 100%;
-    width: 100%;
+   border: var(--main-accent-color) var(--main-border-type) 0.5rem;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
 }
 .major-1 .bg-image-major-1{
     background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png);
     opacity: 0.5;
     background-size: 100%;
-    height: 100%;
-    width: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
 }
+/* move header for larger project title */
 .card-header-major{
+    transform: translate(-4%, -130%);
+}
+/* styling for major and mini project header */
+[class^="card-header-m"]{
     background-color: var(--main-accent-color);   
     display: inline-block; 
     color: var(--main-text-color);
-    transform: translate(-4%, -130%);
-    border: var(--main-accent-color) solid 3px;
+    border: var(--main-accent-color) var(--main-border-type) 3px;
     border-radius: 5px;
     padding: 3px;
 }
+/* subtext sizing for project headers */
 [class^="card-header-"] span{
     font-size: 1.25rem;
 }
-/* .card-header-major span{
-    font-size: 1.25rem;
-}
-.card-header-mini span{
-    font-size: 1.25rem;
-} */
-/* h3[class^=".card-header-"] span{
-    font-size: 1.25rem;
-} */
+/* move header for smaller mini projects */
 .card-header-mini{
-    background-color: var(--main-accent-color);   
-    display: inline-block; 
-    color: var(--main-text-color);
     transform: translate(-3%, -115%);
-    border: var(--main-accent-color) solid 3px;
-    border-radius: 5px;
-    padding: 3px;
 }
-
+/* set to flex box */
 .mini-project{    
     display: flex;
     flex-wrap: wrap; 
     flex-grow: 1;   
 }
 .mini-project-card{
-    flex-basis: 100%;
+    flex-basis: var(--main-content-fullwidth);
     padding: 15px;
     margin: 0.5rem 0;
     outline-offset: -8px;
     position: relative;
-    min-height: 12rem;
+    min-height: var(--main-display-smallitem);
 }
 .mini-project-card .mini-1{  
-    border: var(--main-accent-color) solid 0.5rem;    
-    height: 100%;
-    width: 100%;
+    border: var(--main-accent-color) var(--main-border-type) 0.5rem;    
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
     transition: .3s;
 
 }
@@ -258,16 +260,17 @@ footer{
     background-image: url(../images/defaultbackdrop.jpg);
     opacity: 0.5;
     background-size: 100%;
-    height: 100%;
-    width: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
 }
 .mini-1 .bg-image-mini-1{
     background-image: url(../images/kevinrhode.github.io_mod-1-challenge.png);
     opacity: 0.5;
     background-size: 100%;
-    height: 100%;
-    width: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
 }
+/* shadow on projects for animation */
 div[class^="bg-image-"]:hover { 
     box-shadow: 2px 2px 25px 10px var(--main-display-shadow);
     opacity: 0.8;
@@ -275,6 +278,7 @@ div[class^="bg-image-"]:hover {
     overflow: hidden;
     transition: .3s;
 }
+/* styling for color */
 .footer-header{
     padding: 0 1rem;
     color: var(--main-text-color);
@@ -283,43 +287,50 @@ div[class^="bg-image-"]:hover {
 .footer-content{
     min-width: 50%;
 }
+/* address content style */
 .footer-content li{
     background-color: var(--main-ivory);
     margin: 1rem 0;
     padding: 0 1rem; 
     text-align: center;
-    border: var(--main-black) solid 2px;
+    border: var(--main-black) var(--main-border-type) 2px;
     border-radius: 2rem;
 }
 @media screen and (min-width:590px) {
 
+    /* switch direction of flex for style */
     .about-me{
         flex-direction: row;
     }
+    /* keep row 15% of page */
     .about-me-header{
         /* max-width: 10%; */
         flex-grow: 0.1;
         flex-basis: 15%;
     }
-    
+    /* keep row content 85% of page */
     .about-me-content{
         /* max-width: 100%; */
         flex-grow: 1;
         flex-basis: 85%;
     }
+    /* match style */
     .work{
         flex-direction: row;
     }
+    /* match style */
     .work-header{
         /* max-width: 10%; */
         flex-grow: 0.1;
         flex-basis: 15%;
     }
+    /* match style */
     .work-content{
         /* max-width: 100%; */
         flex-grow: 1;
         flex-basis: 85%;
     }    
+    /* remove mini projects from 1 per line to 2 */
     .mini-project-card{
         
         /* max-width: 50%; */
@@ -329,12 +340,14 @@ div[class^="bg-image-"]:hover {
 
 }
 @media screen and (min-width:627px) {
+    /* move avatar to below name */
     .avatar-container{
         width: 32%;
     }
     
 }
 @media screen and (min-width:768px) {
+    /* set minor projects to 2 */
     .mini-project-card{
         max-width: 50%;
     }
@@ -344,6 +357,7 @@ div[class^="bg-image-"]:hover {
     .header-content nav li{
         flex-grow: 1;
     }
+    /* top nav grow for small portion */
     .header-content nav li:last-child {
         flex-grow: 1;
       }
@@ -365,6 +379,17 @@ div[class^="bg-image-"]:hover {
     }
 } */
 
+/* notes of old code below */
+
+/* .card-header-major span{
+    font-size: 1.25rem;
+}
+.card-header-mini span{
+    font-size: 1.25rem;
+} */
+/* h3[class^=".card-header-"] span{
+    font-size: 1.25rem;
+} */
 /* div[class^="bg-image-major"]:hover { 
     box-shadow: 2px 2px 25px 10px var(--main-display-shadow);
     opacity: 0.8;
