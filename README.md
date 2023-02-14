@@ -28,6 +28,8 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 # Usage
 
+[Link to Mod-2-Challenge](https://kevinrhode.github.io/portfolio-css/)
+
 ## Mark Up
 
 ![imageofthecompletedwork](./assets/images/module-2-chall.jpg)
