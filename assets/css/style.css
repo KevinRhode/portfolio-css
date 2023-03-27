@@ -154,8 +154,6 @@ footer{
     background-position: 51% 40%;
     background-image: url(../images/IMG_0930.jpg);
     border: var(--main-accent-color) var(--main-border-type) 0.5rem;
-    
-     
     /* transform:translate(0% 50%) */
     
 }
@@ -207,7 +205,8 @@ footer{
     width: var(--main-content-fullwidth);
 }
 .major-1 .bg-image-major-1{
-    background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png);
+    background-image: url(../images/volunteer-finder_volunteer-list.html.png);
+    background-position: 0% 22%;
     opacity: 0.5;
     background-size: 100%;
     height: var(--main-content-fullwidth);
@@ -265,6 +264,27 @@ footer{
 }
 .mini-1 .bg-image-mini-1{
     background-image: url(../images/kevinrhode.github.io_mod-1-challenge.png);
+    opacity: 0.5;
+    background-size: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
+}
+.mini-1 .bg-image-mini-2{
+    background-image: url(../images/kevinrhode.github.io_mod-2-miniproject.png);
+    opacity: 0.5;
+    background-size: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
+}
+.mini-1 .bg-image-mini-3{
+    background-image: url(../images/Javascript-pass-gen.png);
+    opacity: 0.5;
+    background-size: 100%;
+    height: var(--main-content-fullwidth);
+    width: var(--main-content-fullwidth);
+}
+.mini-1 .bg-image-mini-4{
+    background-image: url(../images/day-planner.png);
     opacity: 0.5;
     background-size: 100%;
     height: var(--main-content-fullwidth);
